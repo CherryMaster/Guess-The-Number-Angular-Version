@@ -1,0 +1,21 @@
+.main{
+  width: 90%;
+  color: #4bab9e;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.input-panel{
+  display: flex;
+  justify-content: space-around;
+}
+
+input{
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 2px dashed grey;
+  border-bottom: 2px solid red;
+  color: #2d4ba9;
+  font-weight: 500;
+}

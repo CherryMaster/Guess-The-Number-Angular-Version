@@ -1,0 +1,31 @@
+.main{
+  background: url(src/assets/pic.jpeg);
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+.app{
+  background: white;
+  width: 70%;
+  height: 60%;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 10px -10px 0 #b1e652, 
+              20px -20px 0 #2d4ba9;
+  margin: 20vh 0 0 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-panel{
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}

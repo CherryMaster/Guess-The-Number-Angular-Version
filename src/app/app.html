@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="app">
+    <app-guessthenumber (emitInput)="guessTheNumber($event)"></app-guessthenumber>
+    <div class="input-panel">
+      <ng-container *ngIf="numberOfTries > 0">
+        <ng-container *ngIf="enteredNumber === actNumber; else notEqual">
+          <app-guessedinfo [number]="enteredNumber" [tries]="numberOfTries"></app-guessedinfo>
+        </ng-container>
+        <ng-template #notEqual>
+          <ng-container *ngIf="enteredNumber > 100 || enteredNumber < 0; else inRange">
+            <app-notguessedinfo [info]="'out of range'"></app-notguessedinfo>
+          </ng-container>
+        
+          <ng-template #inRange>
+            <ng-container *ngIf="enteredNumber > actNumber; else tooLow">
+              <app-notguessedinfo [info]="'too high'"></app-notguessedinfo>
+            </ng-container>
+            
+            <ng-template #tooLow>
+              <app-notguessedinfo [info]="'too low'"></app-notguessedinfo>
+            </ng-template>
+          </ng-template>
+        </ng-template>
+      </ng-container>
+    
+      <ng-container *ngIf="enteredNumber === actNumber">
+        <app-newnumber (numberEmit)="newNumber($event)">
+        </app-newnumber>
+      </ng-container>
+    </div>
+  </div>
+</div>
